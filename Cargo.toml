@@ -1,15 +1,15 @@
 [package]
-name = "substrate-deps"
+name = "tetcore-deps"
 version = "0.2.0"
 authors = ["Steve Degosserie <steve@parity.io>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
 readme = "README.md"
-homepage = "https://github.com/paritytech/substrate-deps"
-repository = "https://github.com/paritytech/substrate-deps"
-documentation = "https://github.com/paritytech/substrate-deps/blob/master/README.md"
+homepage = "https://github.com/tetcoin/tetcore-deps"
+repository = "https://github.com/tetcoin/tetcore-deps"
+documentation = "https://github.com/tetcoin/tetcore-deps/blob/master/README.md"
 description = """
-Substrate-deps, a command line tool for managing Parity Substrate runtime pallet dependencies.
+Tetcore-deps, a command line tool for managing Tetcore runtime pallet dependencies.
 """
 
 [dependencies]

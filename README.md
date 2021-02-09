@@ -1,35 +1,35 @@
-substrate-deps
+tetcore-deps
 ==============
 
-[![rust build](https://github.com/paritytech/substrate-deps/workflows/rust/badge.svg)](https://github.com/paritytech/substrate-deps/actions)
-[![dependency status](https://deps.rs/repo/github/paritytech/substrate-deps/status.svg)](https://deps.rs/repo/github/paritytech/substrate-deps)
+[![rust build](https://github.com/tetcoin/tetcore-deps/workflows/rust/badge.svg)](https://github.com/tetcoin/tetcore-deps/actions)
+[![dependency status](https://deps.rs/repo/github/tetcoin/tetcore-deps/status.svg)](https://deps.rs/repo/github/tetcoin/tetcore-deps)
 
-`substrate-deps` is a command line tool for managing [Parity Substrate](http://substrate.dev) pallet dependencies.
+`tetcore-deps` is a command line tool for managing [Tetcore](http://core.tetcoin.org) pallet dependencies.
 
 The following commands are available:
 
-- [`substrate-deps add`](#substrate-deps-add)
-- [`substrate-deps graph`](#substrate-deps-graph)
+- [`tetcore-deps add`](#tetcore-deps-add)
+- [`tetcore-deps graph`](#tetcore-deps-graph)
 
 ## How to install
 
-Install `substrate-deps` locally with:
+Install `tetcore-deps` locally with:
 ```bash
-cargo install substrate-deps
+cargo install tetcore-deps
 ```
 
 ## Commands
 
-### `substrate-deps add`
+### `tetcore-deps add`
 
-Add a new pallet dependency to your Substrate runtime's `Cargo.toml`.
+Add a new pallet dependency to your Tetcore runtime's `Cargo.toml`.
 
 #### Examples
 
-To add the Substrate Contracts `pallet-contracts` pallet:
+To add the Tetcore Contracts `pallet-contracts` pallet:
 ```sh
 $ # Add the pallet pallet-contracts to the runtime whose manifest is specified as argument.
-$ substrate-deps add pallet-contracts --alias contracts --manifest-path ../substrate-package/substrate-node-template/runtime/Cargo.toml
+$ tetcore-deps add pallet-contracts --alias contracts --manifest-path ../tetcore-package/tetcore-node-template/runtime/Cargo.toml
 
 Added pallet pallet-contracts v2.0.0-alpha.3 configuration in your node runtime manifest.
 Added pallet pallet-contracts v2.0.0-alpha.3 configuration in your node runtime.
@@ -38,9 +38,9 @@ Added pallet pallet-contracts v2.0.0-alpha.3 configuration in your node runtime.
 #### Usage
 
 ```plain
-$ substrate-deps add --help
+$ tetcore-deps add --help
 USAGE:
-    substrate-deps add [FLAGS] [OPTIONS] <pallet>
+    tetcore-deps add [FLAGS] [OPTIONS] <pallet>
 
 FLAGS:
     -h, --help       Prints help information
@@ -57,11 +57,11 @@ ARGS:
     <pallet>    Pallet to be added e.g. pallet-staking
 ```
 
-This command allows you to add a new pallet dependency to your Substrate runtime's Cargo.toml manifest file. `substrate-deps add` will fetch the pallet from crates.io (or the give alternate registry), and add it to your runtime's `Cargo.toml` and `libs.rs` files.
+This command allows you to add a new pallet dependency to your Tetcore runtime's Cargo.toml manifest file. `tetcore-deps add` will fetch the pallet from crates.io (or the give alternate registry), and add it to your runtime's `Cargo.toml` and `libs.rs` files.
 
-### `substrate-deps graph`
+### `tetcore-deps graph`
 
-Generates a dependency graph of the pallets used by your Substrate runtime e.g.
+Generates a dependency graph of the pallets used by your Tetcore runtime e.g.
 
 ![sample graph](sample-graph.png)
 
@@ -71,17 +71,17 @@ This command output a dependency graph for [graphviz](https://graphviz.gitlab.io
 
 ```sh
 $ # Generate a dependency graph of the pallets used by the runtime whose manifest is specified as argument and pipe it to the dot command to generate an image file.
-$ substrate-deps graph --manifest-path ../substrate-package/substrate-node-template/runtime/Cargo.toml | dot -Tpng > graph.png
+$ tetcore-deps graph --manifest-path ../tetcore-package/tetcore-node-template/runtime/Cargo.toml | dot -Tpng > graph.png
 ```
 
 #### Usage
 ```plain
-$ substrate-deps graph --help
-substrate-deps-graph
-Generate a graph of the Substrate runtime pallet dependencies.
+$ tetcore-deps graph --help
+tetcore-deps-graph
+Generate a graph of the Tetcore runtime pallet dependencies.
 
 USAGE:
-    substrate-deps graph [FLAGS] [OPTIONS]
+    tetcore-deps graph [FLAGS] [OPTIONS]
 
 FLAGS:
     -h, --help                Prints help information

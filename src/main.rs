@@ -48,7 +48,7 @@ fn parse_cli<'a>() -> ArgMatches<'a> {
         // offline, locked, no-default-features, etc
         .subcommand(
             SubCommand::with_name("add")
-                .about("Adds a pallet to the Substrate runtime.")
+                .about("Adds a pallet to the Tetcore runtime.")
                 .arg(
                     Arg::with_name("pallet")
                         .help("Pallet to be added e.g. pallet-staking")
@@ -73,7 +73,7 @@ fn parse_cli<'a>() -> ArgMatches<'a> {
         )
         .subcommand(
             SubCommand::with_name("graph")
-                .about("Generate a graph of the Substrate runtime pallet dependencies.")
+                .about("Generate a graph of the Tetcore runtime pallet dependencies.")
                 .arg(
                     Arg::with_name("include-versions")
                     .long("include-versions")
